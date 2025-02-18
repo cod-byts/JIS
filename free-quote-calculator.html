@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Quote Calculator - J's Insurance Service</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">J's Insurance Service</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="customer-portal.html">Customer Portal</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-header">
+    <h1>Free Quote Calculator</h1>
+    <p>Get your instant insurance quote by filling out the details below.</p>
+  </section>
+
+  <!-- Quote Calculator Form -->
+  <section class="quote-calculator">
+    <form id="quoteForm">
+      <label for="qName">Name:</label>
+      <input type="text" id="qName" name="qName" required>
+
+      <label for="qContact">Contact Information:</label>
+      <input type="text" id="qContact" name="qContact" required>
+
+      <label for="qInsuranceType">Type of Insurance:</label>
+      <select id="qInsuranceType" name="qInsuranceType" required>
+        <option value="auto">Auto</option>
+        <option value="commercial-auto">Commercial Auto</option>
+        <option value="business">Business</option>
+      </select>
+
+      <label for="qVehicleDetails">Vehicle/Business Details:</label>
+      <textarea id="qVehicleDetails" name="qVehicleDetails" required></textarea>
+
+      <label for="qCoverage">Coverage Options:</label>
+      <select id="qCoverage" name="qCoverage" required>
+        <option value="basic">Basic Coverage</option>
+        <option value="premium">Premium Coverage</option>
+      </select>
+
+      <!-- Button calls the calculateQuote() function from main.js -->
+      <button type="button" onclick="calculateQuote()">Calculate Quote</button>
+    </form>
+    <!-- Div to display the calculated quote -->
+    <div id="quoteResult"></div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>Success Stories</h2>
+    <div class="testimonial">
+      <p>"I got my quote in minutes and it was spot on!"</p>
+      <span>- Satisfied Customer</span>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <h3>How accurate is the quote calculator? <a href="blog.html">Learn More</a></h3>
+      <p>Our calculator provides an instant estimate based on your inputs.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 J's Insurance Service. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

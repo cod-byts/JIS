@@ -1,0 +1,279 @@
+/* style.css */
+
+/* ============================== */
+/* 🌟 BRANDING VARIABLES */
+/* ============================== */
+
+:root {
+  /* 🎨 COLOR PALETTE */
+  --primary-blue: #004AAD; /* Core Branding Color */
+  --secondary-blue: #64B5F6; /* Highlights, Links */
+  --trust-green: #2E7D32; /* Trust Signals, Success States */
+  --cta-orange: #E6804D; /* Call-to-Action Color */
+  --soft-gray: #F5F5F5; /* Backgrounds, Contrast Areas */
+  --dark-gray: #333333; /* Main Text Color */
+
+  /* 🖋️ TYPOGRAPHY */
+  --primary-font: 'Inter', sans-serif;
+  --secondary-font: 'Poppins','Merriweather', serif;
+  --cta-font: 'Lato', sans-serif;
+
+  /* 🔳 SPACING & BORDERS */
+  --border-radius: 8px; /* Standard UI rounded corners */
+  --section-padding: 2rem; /* Consistent section spacing */
+  --max-width: 1200px; /* Container width for centered content */
+
+  /* 🔘 SHADOWS & EFFECTS */
+  --shadow-light: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0px 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Global reset and box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Basic body styling */
+  body {
+    font-family: var(--primary-font), Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005a9c;
+    padding: 1rem;
+    color: #fff;
+    z-index: 10;
+  }
+  
+  .navbar .logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar .search-bar input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  /* Page header styling */
+  .page-header {
+    background-color: #e0e0e0;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    margin-bottom: 1rem;
+  }
+  
+  /* General section styling */
+  section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background: #fff;
+  }
+  
+  /* Hero section styles */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em 2rem;
+    margin-top: 0;
+    height: calc(100vh - 70.4px);
+  }
+
+  .hero-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+  
+  .hero-text {
+    flex: 1.3;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: var(--secondary-font);
+  }
+  
+  .hero-text p {
+    margin-bottom: 3rem;
+  }
+  
+  .hero-images {
+    flex: .7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    row-gap: 2rem;
+    width:60%;
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+  
+  .hero-images img {
+    max-width: 100px;
+    margin: 0.5rem;
+    text-align: right;
+  }
+
+  .all-insurance-link{
+    width: 100%;
+    text-align: end;
+  }
+
+ /* Hero Right Section */
+.hero-right {
+  flex: 1.5;
+  display: flex;
+  justify-content: flex-end; /* Align closer to the right */
+  padding-right: 3%;
+  height: 100%;
+}
+
+/* Scroller Container */
+.scroller-container {
+  display: flex;
+  justify-content: flex-end; /* Align closer to the right */
+  gap: 20px;
+  width: 70%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Individual Scroller */
+.scroller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  height: 100%;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.scroller-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  transition: transform 0.1s linear;
+}
+
+/* Image Styling */
+.scroller-track a img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.scroller-track a:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+  
+  /* Sections for features, testimonials, CTA, FAQ, etc. */
+  .feature, .testimonials, .cta, .faq, .benefits, .gallery {
+    margin: 2rem 0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #005a9c;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .testimonials .testimonial {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-left: 5px solid #005a9c;
+    margin: 1rem 0;
+  }
+  
+  .faq .faq-item {
+    margin: 1rem 0;
+  }
+  
+  .faq .faq-item h3 a {
+    color: #005a9c;
+    text-decoration: none;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin: 0.5rem 0 0.25rem;
+  }
+  
+  form input, form textarea, form select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    margin-top: 1rem;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .navbar .nav-links {
+      flex-direction: column;
+    }
+    .hero {
+      flex-direction: column;
+    }
+  }
+  

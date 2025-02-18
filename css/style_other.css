@@ -1,0 +1,154 @@
+/* style.css */
+
+/* ============================== */
+/* 🌟 BRANDING VARIABLES */
+/* ============================== */
+
+:root {
+    /* 🎨 COLOR PALETTE */
+    --primary-blue: #004AAD; /* Core Branding Color */
+    --secondary-blue: #64B5F6; /* Highlights, Links */
+    --trust-green: #2E7D32; /* Trust Signals, Success States */
+    --cta-orange: #E6804D; /* Call-to-Action Color */
+    --soft-gray: #F5F5F5; /* Backgrounds, Contrast Areas */
+    --dark-gray: #333333; /* Main Text Color */
+  
+    /* 🍍 TYPOGRAPHY */
+    --primary-font: 'Inter', sans-serif;
+    --secondary-font: 'Poppins','Merriweather', serif;
+    --cta-font: 'Lato', sans-serif;
+  
+    /* 🔲 SPACING & BORDERS */
+    --border-radius: 8px; /* Standard UI rounded corners */
+    --section-padding: 2rem; /* Consistent section spacing */
+    --max-width: 1200px; /* Container width for centered content */
+  
+    /* 🔘 SHADOWS & EFFECTS */
+    --shadow-light: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0px 8px 14px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Global reset and box-sizing */
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Basic body styling */
+  body {
+      font-family: var(--primary-font);
+      line-height: 1.6;
+      color: var(--dark-gray);
+      background-color: var(--soft-gray);
+  }
+  
+  /* Navbar styles */
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--primary-blue);
+      padding: 1rem;
+      color: #fff;
+      z-index: 10;
+  }
+  
+  .navbar .logo a {
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+  }
+  
+  .navbar .nav-links {
+      list-style: none;
+      display: flex;
+  }
+  
+  .navbar .nav-links li {
+      margin: 0 1rem;
+  }
+  
+  .navbar .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  .navbar .search-bar input {
+      padding: 0.5rem;
+      border: none;
+      border-radius: var(--border-radius);
+  }
+  
+  /* Hero Section */
+  .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--section-padding);
+      background: white;
+  }
+  
+  .hero-left .hero-text h1 {
+      font-family: var(--secondary-font);
+      color: var(--primary-blue);
+      font-size: 2.5rem;
+  }
+  
+  .hero-text p {
+      font-size: 1.2rem;
+  }
+  
+  .hero-right .scroller img {
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-light);
+      transition: transform 0.3s ease-in-out;
+  }
+  
+  .hero-right .scroller img:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-hover);
+  }
+  
+  /* Feature Sections */
+  .feature, .how-it-works, .testimonials, .benefits, .faq, .cta {
+      text-align: center;
+      padding: var(--section-padding);
+  }
+  
+  /* CTA Button */
+  .cta-button {
+      display: inline-block;
+      background-color: var(--cta-orange);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow-medium);
+      transition: 0.3s ease-in-out;
+  }
+  
+  .cta-button:hover {
+      background-color: var(--trust-green);
+      box-shadow: var(--shadow-hover);
+  }
+  
+  /* Footer styling */
+  footer {
+      background-color: var(--dark-gray);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+      .navbar .nav-links {
+          flex-direction: column;
+      }
+      .hero {
+          flex-direction: column;
+      }
+  }
+  
